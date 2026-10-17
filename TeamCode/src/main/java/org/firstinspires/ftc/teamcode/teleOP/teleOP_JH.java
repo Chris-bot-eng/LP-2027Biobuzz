@@ -122,10 +122,10 @@ public class teleOP_JH extends OpMode {
         //GAMEPAD 2 PROGRAMS
 
 
-        if (gamepad2.bWasPressed()){
+        if (gamepad1.bWasPressed()){
             switch (intakeStatus){
                 case ON:
-                    intake.setDirection(DcMotorSimple.Direction.FORWARD);
+                    intake.setDirection(DcMotorSimple.Direction.REVERSE);
                     intakeStatus = IntakeStatus.OFF;
                     intake.setPower(0);
                     leftintake.setPower(0);
@@ -133,7 +133,7 @@ public class teleOP_JH extends OpMode {
                     break;
 
                 case OFF:
-                    intake.setDirection(DcMotorSimple.Direction.REVERSE);
+                    intake.setDirection(DcMotorSimple.Direction.FORWARD);
                     intakeStatus = IntakeStatus.ON;
                     intake.setPower(1);
                     leftintake.setPower(1);

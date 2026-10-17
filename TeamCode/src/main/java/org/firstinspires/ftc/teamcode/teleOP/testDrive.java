@@ -83,18 +83,17 @@ public class testDrive extends OpMode {
 
 
         // --- GAMEPAD 2 INTAKE PROGRAM ---
-        // Note: Replaced "bWasPressed()" (which isn't a standard FTC SDK method) with a standard boolean check.
         if (gamepad2.b) {
             switch (intakeStatus) {
                 case ON:
-                    intake.setDirection(DcMotorSimple.Direction.FORWARD);
+                    intake.setDirection(DcMotorSimple.Direction.REVERSE);
                     intakeStatus = IntakeStatus.OFF;
                     intake.setPower(0);
                     leftintake.setPower(0);
                     rightintake.setPower(0);
                     break;
                 case OFF:
-                    intake.setDirection(DcMotorSimple.Direction.REVERSE);
+                    intake.setDirection(DcMotorSimple.Direction.FORWARD);
                     intakeStatus = IntakeStatus.ON;
                     intake.setPower(1);
                     leftintake.setPower(1);
